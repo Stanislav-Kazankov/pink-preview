@@ -1,0 +1,163 @@
+.conts {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-algn-cntr();
+
+  overflow: hidden;
+}
+
+.conts__cntr-wrap {
+  @include make-flex();
+  @include make-flex-col();
+  @include make-cntr();
+  min-height: inherit;
+}
+
+@media (max-width: $max-mobl-width) {
+  .conts__cntr-wrap {
+    width: 280px;
+    padding-top: 42px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 19px;
+  }
+}
+
+@media (min-width: $tablt-width) {
+  .conts__cntr-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .conts__cntr-wrap {
+    width: 620px;
+    padding-top: 46px;
+    padding-bottom: 4px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .conts__cntr-wrap {
+    width: 940px;
+    padding-top: 72px;
+    padding-bottom: 50px;
+  }
+}
+
+.conts__list {
+  @include rset-list();
+}
+
+.conts__map {
+  position: relative;
+
+  width: 100%;
+  background-position: center -445px;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+@media (max-width: 320px) {
+  .conts__map {
+    background-size: 320px 645px;
+  }
+}
+
+@media (max-width: 320px) and (max-resolution: $usual-dppx) ,
+       (max-width: 320px) and (max-resolution: $usual-dpi) {
+  .conts__map {
+    background-image: url("../img/bg-map-mobile@1x.png");
+  }
+}
+
+@media (max-width: 320px) and (max-resolution: $usual-dppx) ,
+       (max-width: 320px) and (max-resolution: $usual-dpi) {
+  .conts__map {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: $max-mobl-width) {
+  .conts__map {
+    height: 200px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: $tablt-width) {
+  .conts__map {
+    width: 700px;
+  }
+}
+
+@media (min-width: 661px) and (max-width: $deskt-width) {
+  .conts__map {
+    width: 2000px;
+  }
+}
+
+@media (min-width: $tablt-width) and (max-width: $max-tablt-width) {
+  .conts__map {
+    height: 372px;
+  }
+}
+
+@media (min-width: $deskt-width) {
+  .conts__map {
+    height: 510px;
+  }
+}
+
+@media (max-width: 320px) {
+  .conts__map::before {
+
+  }
+}
+
+.conts__map::after {
+  content: "";
+
+  position: absolute;
+
+  left: calc(50% - 18px);
+  top: calc(50% - 4.5px);
+
+  width: 36px;
+  height: 35px;
+
+  background-position: center center;
+  background-size: 36px 35px;
+  background-repeat: no-repeat;
+  background-image: url("../img/icon-map-marker.svg");
+}
+
+.cont-list__iframe {
+  width: inherit;
+  height: inherit;
+
+  border: none;
+}
+
+.conts__map-img {
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  .conts__map-img {
+    margin-top: -445px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: $tablt-width) {
+  .conts__map-img {
+    margin-top: -458px;
+  }
+}
+
+@media (min-width: 661px) and (max-width: $deskt-width) {
+  .conts__map-img {
+    margin-top: -228%;
+  }
+}
